@@ -16,7 +16,7 @@ const urlCompleta = "https://" + urlSite;
 
 const variavelSaida = 0;
 
-( async() => { 
+async function resultado() { 
     let browser; 
     let browser2;   
     try {
@@ -315,7 +315,8 @@ const variavelSaida = 0;
 
         process.exit();
     }
-})();
+}
+resultado();
 
     function promptSite( mensagem ) {
         var rl = readline.createInterface({

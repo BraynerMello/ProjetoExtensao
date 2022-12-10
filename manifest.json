@@ -19,6 +19,7 @@
     "content_scripts": [
         {
             "js":[
+                "index.js",
                 "src/main.js"
             ],
             "matches":[
