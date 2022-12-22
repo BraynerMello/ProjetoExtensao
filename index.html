@@ -7,24 +7,26 @@
     <title>Menu</title>
 </head>
 <body>
-    <h1>Essa loja é segura?</h1>
-
-    <div>
-        <p>só testando</p>
+    <h3>Deseja conferir os dados da loja no WhoIs?</h3>
+    <div id="dados-loja">
+        
     </div>
+
 </body>
 </html>
-<script type="module" src="src/main.js"></script>
-<script type="module" src="index.js"></script>
 
+<script type="module">
+    import fetch from "node-fetch";
+    import pupp from 'puppeteer';
+    import readline from 'readline';
+    import fs from 'fs';
+    import open from 'open';
+</script>
 
-<!-- metas
+<script src="index.js"></script>
 
-1 - fazer os dados do whois aparecerem na extensão 
+<script src="main.js">
+    
+</script>
 
-2 - redirecionar via url para consumidor.gov.br 
-
-3 - redirecionar para o reclame aqui
-
-4 - evitar que a busca do whois abra o navegador (?)  -->
 
