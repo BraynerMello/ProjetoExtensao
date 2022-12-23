@@ -16,7 +16,7 @@ async function montaTela(){
     dados.innerHTML = `<h3>informações relevantes sobre o site ${site.dominio}</h3>`;
 
     dados.innerHTML +=
-     `<table>
+     `<table border="1">
              <tr>
                 <th>Criação do domínio</th>
                 <th>Última alteração de domínio</th>
