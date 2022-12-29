@@ -3,6 +3,8 @@ const app = express();
 const session = require("express-session");
 const cors = require("cors");
 const fetch = require("node-fetch");
+const fs = require("fs");
+const https = require("https");
 
 app.use(session({
     secret: "Brayner",
@@ -42,4 +44,11 @@ app.get("/receita/:slug", async (req, res) => {
 
 app.listen(80,'192.168.67.105', () => {
     console.log("API UP! ");
+});
+
+https.createServer({
+    cert:fs.readFileSync('SSL/code.crt'),
+    key:fs.readFileSync('SSL/code.key')
+}, app).listen(3001,'192.168.67.105',() => {
+    console.log("RODANDO HTTPS");
 });

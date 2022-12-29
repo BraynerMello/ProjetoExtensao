@@ -85,7 +85,7 @@ function Consulta() {
             async function buscarInformacoesAPIReceita( cnpj ) {
                 const cnpjSemPontosETracos = cnpj.replace(/[^\d]+/g, "");
                 try {
-                    let response = await fetch(`http://192.168.67.105:80/receita/${cnpjSemPontosETracos}`, {
+                    let response = await fetch(`http://192.168.67.105:3001/receita/${cnpjSemPontosETracos}`, {
                         "method": "GET",
                         "headers": {
                             "Content-Type": "application/json"
@@ -112,7 +112,7 @@ function Consulta() {
 
             async function buscarInformacoesWhoIs (  url ) {
                 try {
-                    let response = await fetch(`http://192.168.67.105:80/whois/${url}`, {
+                    let response = await fetch(`http://192.168.67.105:3001/whois/${url}`, {
                         "method": "GET",
                         "headers": {
                             "Content-Type": "application/json"
