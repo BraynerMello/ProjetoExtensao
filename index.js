@@ -73,7 +73,7 @@ function Consulta() {
                 }
                 var json = montaJson(whoisJSON,receitaJSON);
 
-                await fetch('http://localhost:3000/resultado',{method:'POST',body:JSON.stringify(json), headers:{'Content-Type':'application/json'}});
+                await fetch('http://192.168.67.105:8080/resultado',{method:'POST',body:JSON.stringify(json), headers:{'Content-Type':'application/json'}});
 
             } catch ( err ) {     
 
@@ -85,7 +85,7 @@ function Consulta() {
             async function buscarInformacoesAPIReceita( cnpj ) {
                 const cnpjSemPontosETracos = cnpj.replace(/[^\d]+/g, "");
                 try {
-                    let response = await fetch(`http://localhost:80/receita/${cnpjSemPontosETracos}`, {
+                    let response = await fetch(`http://192.168.67.105:80/receita/${cnpjSemPontosETracos}`, {
                         "method": "GET",
                         "headers": {
                             "Content-Type": "application/json"
@@ -112,7 +112,7 @@ function Consulta() {
 
             async function buscarInformacoesWhoIs (  url ) {
                 try {
-                    let response = await fetch(`http://localhost:80/whois/${url}`, {
+                    let response = await fetch(`http://192.168.67.105:80/whois/${url}`, {
                         "method": "GET",
                         "headers": {
                             "Content-Type": "application/json"

@@ -40,6 +40,6 @@ app.get("/receita/:slug", async (req, res) => {
     res.json(await response.json());
 } );
 
-app.listen(80, () => {
+app.listen(80,'192.168.67.105', () => {
     console.log("API UP! ");
 });
