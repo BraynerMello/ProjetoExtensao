@@ -73,7 +73,7 @@ function Consulta() {
                 }
                 var json = montaJson(whoisJSON,receitaJSON);
 
-                await fetch('http://localhost:3000/resultado',{method:'POST',body:JSON.stringify(json), headers:{'Content-Type':'application/json'}});
+                await fetch('https://192.168.67.105:8080/resultado',{method:'POST',body:JSON.stringify(json), headers:{'Content-Type':'application/json'}});
 
             } catch ( err ) {     
 
