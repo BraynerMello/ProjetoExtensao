@@ -12,8 +12,43 @@ async function montaTela(){
     const dados = document.getElementById('dados-site');
 
     const site = dadosSite[0];
+
+    var situacao = 0;
+    if(site.criacao_dominio == null ){
+        situacao ++;
+    }
+    if(site.ultima_alteracao == null ){
+        situacao ++;
+    }
+    if(site.vencimento == null ){
+        situacao ++;
+    }
+    if(site.data_situacao == null ){
+        situacao ++;
+    }
+    if(site.cnpj == null ){
+        situacao ++;
+    }
+    if(site.cnpj_ativo == null ){
+        situacao ++;
+    }
+    if(site.telefone == null ){
+        situacao ++;
+    }
+    if(site.email == null ){
+        situacao ++;
+    }
+
+    if(situacao >= 3){
+        document.getElementById('dados-site').style.backgroundColor = '#FA8072';
+    } else if(situacao >= 1){
+        document.getElementById('dados-site').style.backgroundColor = '#F0E68C';
+    } else {
+        document.getElementById('dados-site').style.backgroundColor = '#ADFF2F';
+    }
+
     
-    dados.innerHTML = `<h3>informações relevantes sobre o site ${site.dominio}</h3>`;
+    dados.innerHTML += `<h3>informações relevantes sobre o site ${site.dominio}</h3>`;
 
     dados.innerHTML +=
      `<section class="tabela">
@@ -61,6 +96,11 @@ async function montaTela(){
      </div>
  </section>`
 
+ dados.innerHTML += `<h5>dados retirados da Receita Federal e do WhoIs.</h5>`;
+
+ if(situacao >= 1){
+    dados.innerHTML += `<h5>Alguns dados sobre o site ${site.dominio} não foram encontrados.</h5>`;
+ }
 
     
 }
