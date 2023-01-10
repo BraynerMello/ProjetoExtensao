@@ -54,23 +54,23 @@ async function montaTela(){
      `<section class="tabela">
      <div class="blocos">
          <div class="titulo">Criação do domínio</div>
-         <div class="info">${site.criacao_dominio}</div>
+         <div class="info">${site.criacao_dominio? `${site.criacao_dominio}` : 'Não encontrado'}</div>
      </div>
      <div class="blocos">
          <div class="titulo">Última alteração de domínio</div>
-         <div class="info">${site.ultima_alteracao}</div>
+         <div class="info">${site.ultima_alteracao? `${site.ultima_alteracao}` : 'Não encontrado'}</div>
      </div>
      <div class="blocos">
          <div class="titulo">Vencimento</div>
-         <div class="info">${site.vencimento}</div>
+         <div class="info">${site.vencimento? `${site.vencimento}` : 'Não encontrado'}</div>
      </div>
      <div class="blocos">
          <div class="titulo">Data - Situação</div>
-         <div class="info">${site.data_situacao}</div>
+         <div class="info">${site.data_situacao? `${site.data_situacao}` : 'Não encontrado'}</div>
      </div>
      <div class="blocos">
          <div class="titulo">CNPJ</div>
-         <div class="info">${site.cnpj}</div>
+         <div class="info">${site.cnpj? `${site.cnpj}` : 'Não encontrado'}</div>
      </div>
      <div class="blocos">
          <div class="titulo">CNPJ ativo?</div>
@@ -78,11 +78,11 @@ async function montaTela(){
      </div>
      <div class="blocos">
          <div class="titulo">Telefone</div>
-         <div class="info">${site.telefone}</div>
+         <div class="info">${site.telefone? `${site.telefone}` : 'Não encontrado'}</div>
      </div>
      <div class="blocos">
          <div class="titulo">Email</div>
-         <div class="info">${site.email}</div>
+         <div class="info">${site.email? `${site.email}` : 'Não encontrado'}</div>
      </div>
      <div class="blocos">
          <div class="titulo">Endereço</div>
